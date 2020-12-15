@@ -6,6 +6,8 @@ import Home from "./demo/Home";
 import Things from "./demo/Things";
 import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
+import ProductAPIDemo from "./demo/ProductAPIDemo";
+import ReviewAPI from "./demo/ReviewAPI";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/things" component={Things} />
+          <Route exact path="/productAPI" component={ProductAPIDemo} />
+          <Route exact path="/reviewAPI/:productId" component={ReviewAPI} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
