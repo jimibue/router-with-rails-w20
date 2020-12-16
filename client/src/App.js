@@ -8,6 +8,7 @@ import NoMatch from "./components/NoMatch";
 import Navbar from "./components/Navbar";
 import ProductAPIDemo from "./demo/ProductAPIDemo";
 import ReviewAPI from "./demo/ReviewAPI";
+import SPADemo from "./demo/SPADemo";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/things" component={Things} />
           <Route exact path="/productAPI" component={ProductAPIDemo} />
           <Route exact path="/reviewAPI/:productId" component={ReviewAPI} />
+          <Route exact path="/spaDemo" component={SPADemo} />
           <Route component={NoMatch} />
         </Switch>
       </Container>
