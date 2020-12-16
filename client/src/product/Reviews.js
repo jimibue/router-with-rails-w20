@@ -33,6 +33,7 @@ export default ({ productId }) => {
       text: text,
     });
     setReviews([...reviews, res.data]);
+    setText("");
   };
 
   const renderBody = () => {
