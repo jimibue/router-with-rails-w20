@@ -17,7 +17,7 @@ export default ({ id, name, description, department, price }) => {
         <Card.Meta>{price}</Card.Meta>
         <Card.Description>{description}</Card.Description>
       </Card.Content>
-      {showReviews && <Reviews productId={id} />}
+      {showReviews && <Reviews key={`${id}`} productId={id} />}
 
       <Card.Content extra>
         <div className="ui three buttons">
