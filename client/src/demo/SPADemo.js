@@ -4,23 +4,20 @@ import Axios from "axios";
 import { useAxiosOnMount } from "../hooks/axiosHooks";
 import SpinnerBasic from "../components/SpinnerBasic";
 import ErrorPage1 from "../components/ErrorPage1";
+import Products from "../product/Products";
 export default () => {
   const [products, loadingProducts, productError] = useAxiosOnMount(
-    "/api/products1"
+    "/api/products"
   );
 
-  if (loadingProducts) {
-    return <SpinnerBasic />;
-  }
-  if (productError) {
-    return <ErrorPage1 err={productError} />;
-  }
   return (
     <>
       <Header>Amazon Home Page (SPA DEMO)</Header>
-      {products.map((p) => (
-        <p>{p.name}</p>
-      ))}
+      <Products
+        products={products}
+        loading={loadingProducts}
+        error={productError}
+      />
     </>
   );
 };

@@ -10,6 +10,7 @@ export const useAxiosOnMount = (url) => {
   useEffect(() => {
     Axios.get(url)
       .then((res) => {
+        console.log(res.data);
         setData(res.data);
         setError(null);
       })
